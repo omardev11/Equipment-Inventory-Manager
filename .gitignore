@@ -1,0 +1,37 @@
+# Build output
+**/bin/
+**/obj/
+artifacts/
+publish/
+
+# Visual Studio and user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Runtime data and exports
+**/data/
+**/exports/
+*.xlsx
+*.xls
+
+# Local Supabase configuration
+viewer/config.js
+**/supabase-settings.json
+
+# Release packages and binaries
+*.zip
+*.7z
+*.rar
+*.exe
+*.dll
+*.pdb
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+

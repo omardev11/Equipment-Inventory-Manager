@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ofis Bilgi İşlem Ekipmanları</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Canlı Görüntüleyici</p>
+      <h1>Ofis Bilgi İşlem Ekipmanları</h1>
+      <div class="hero-meta">
+        <span id="last-sync-label">Son güncelleme bekleniyor...</span>
+      </div>
+    </header>
+
+    <section class="stats" id="stats">
+      <article class="stat-card">
+        <span class="stat-label">Toplam Kayıt</span>
+        <strong id="total-count">0</strong>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Model Eksik</span>
+        <strong id="missing-model-count">0</strong>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Seri No Eksik</span>
+        <strong id="missing-serial-count">0</strong>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Lokasyon Sayısı</span>
+        <strong id="location-count">0</strong>
+      </article>
+    </section>
+
+    <section class="filters">
+      <label class="field">
+        <span>Arama</span>
+        <input id="search-input" type="search" placeholder="Ad, model, seri no veya sorumlu ara">
+      </label>
+      <label class="field">
+        <span>Malzeme Grubu</span>
+        <select id="group-filter">
+          <option value="">Tümü</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Lokasyon</span>
+        <select id="location-filter">
+          <option value="">Tümü</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Sorumlu</span>
+        <input id="owner-filter" type="search" placeholder="Sorumlu ara">
+      </label>
+    </section>
+
+    <section class="viewer-state" id="viewer-state">Veriler yükleniyor...</section>
+
+    <section class="table-card">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Sıra No</th>
+              <th>Malzeme Grubu</th>
+              <th>Malzeme Adı</th>
+              <th>Birim</th>
+              <th>Miktar</th>
+              <th>Model</th>
+              <th>Seri No</th>
+              <th>Lokasyon</th>
+              <th>Sorumlu</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mobile-cards" id="mobile-cards"></section>
+  </div>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
